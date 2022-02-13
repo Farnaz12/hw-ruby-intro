@@ -1,0 +1,125 @@
+Hello, World!
+
+Ruby intro part 1
+  #sum
+    should be defined
+    returns correct sum [20 points]
+    works on the empty array [10 points]
+  #max_2_sum
+5
+    should be defined
+9
+    returns the correct sum [7 points] (FAILED - 1)
+6
+    works even if 2 largest values are the same [3 points] (FAILED - 2)
+0
+    returns zero if array is empty [10 points] (FAILED - 3)
+3
+    returns value of the element if just one element [10 points] (FAILED - 4)
+  #sum_to_n
+    should be defined (FAILED - 5)
+    returns true when any two elements sum to the second argument [30 points] (FAILED - 6)
+    returns false for any single element array [5 points]
+    returns false for an empty array [5 points] (FAILED - 7)
+
+#hello
+  should be defined
+  The hello method returns the correct string [30 points]
+
+#starts_with_consonant?
+  should be defined
+  classifies true cases [10 points]
+  classifies false cases [10 points]
+  works on the empty string [5 points]
+  works on nonletters [5 points]
+
+#binary_multiple_of_4?
+  should be defined
+  classifies valid binary numbers [30 points]
+  rejects invalid binary numbers [10 points]
+
+BookInStock
+  should be defined
+  getters and setters
+    should set ISBN [10 points]
+    should set price [10 points]
+    should be able to change ISBN [10 points]
+    should be able to change price [10 points]
+  constructor
+    should reject invalid ISBN number [10 points]
+    should reject zero price [10 points]
+    should reject negative price [10 points]
+  #price_as_string
+    should be defined
+    should display 33.95 as "$33.95" [10 points]
+    should display 1.1 as $1.10 [10 points]
+    should display 20 as $20.00 [10 points]
+
+Failures:
+
+  1) Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+     Failure/Error: expect(max_2_sum([1, 2, 3, 4, 5])).to be_a_kind_of Integer
+       expected nil to be a kind of Integer
+     # ./spec/part1_spec.rb:29:in `block (3 levels) in <top (required)>'
+
+  2) Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points]
+     Failure/Error: expect(max_2_sum([1, 2, 3, 3])).to eq(6)
+
+       expected: 6
+            got: nil
+
+       (compared using ==)
+     # ./spec/part1_spec.rb:33:in `block (3 levels) in <top (required)>'
+
+  3) Ruby intro part 1 #max_2_sum returns zero if array is empty [10 points]
+     Failure/Error: expect(max_2_sum([])).to be_zero
+       expected nil to respond to `zero?`
+     # ./spec/part1_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+  4) Ruby intro part 1 #max_2_sum returns value of the element if just one element [10 points]
+     Failure/Error: expect(max_2_sum([3])).to eq(3)
+
+       expected: 3
+            got: nil
+
+       (compared using ==)
+     # ./spec/part1_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+  5) Ruby intro part 1 #sum_to_n should be defined
+     Failure/Error: expect { sum_to_n?([1, 2, 3], 4) }.not_to raise_error
+
+       expected no Exception, got #<NameError: undefined local variable or method `x' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x0000000001674160>> with backtrace:
+         # ./lib/ruby_intro.rb:39:in `sum_to_n?'
+         # ./spec/part1_spec.rb:45:in `block (4 levels) in <top (required)>'
+         # ./spec/part1_spec.rb:45:in `block (3 levels) in <top (required)>'
+     # ./spec/part1_spec.rb:45:in `block (3 levels) in <top (required)>'
+
+  6) Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+     Failure/Error: while x >= 0
+
+     NameError:
+       undefined local variable or method `x' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x00000000016aedb0>
+     # ./lib/ruby_intro.rb:39:in `sum_to_n?'
+     # ./spec/part1_spec.rb:48:in `block (3 levels) in <top (required)>'
+
+  7) Ruby intro part 1 #sum_to_n returns false for an empty array [5 points]
+     Failure/Error: while x >= 0
+
+     NameError:
+       undefined local variable or method `x' for #<RSpec::ExampleGroups::RubyIntroPart1::SumToN:0x00000000016b04f8>
+     # ./lib/ruby_intro.rb:39:in `sum_to_n?'
+     # ./spec/part1_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+Finished in 0.0534 seconds (files took 0.09659 seconds to load)
+34 examples, 7 failures
+
+Failed examples:
+
+rspec ./spec/part1_spec.rb:28 # Ruby intro part 1 #max_2_sum returns the correct sum [7 points]
+rspec ./spec/part1_spec.rb:32 # Ruby intro part 1 #max_2_sum works even if 2 largest values are the same [3 points]
+rspec ./spec/part1_spec.rb:35 # Ruby intro part 1 #max_2_sum returns zero if array is empty [10 points]
+rspec ./spec/part1_spec.rb:38 # Ruby intro part 1 #max_2_sum returns value of the element if just one element [10 points]
+rspec ./spec/part1_spec.rb:44 # Ruby intro part 1 #sum_to_n should be defined
+rspec ./spec/part1_spec.rb:47 # Ruby intro part 1 #sum_to_n returns true when any two elements sum to the second argument [30 points]
+rspec ./spec/part1_spec.rb:60 # Ruby intro part 1 #sum_to_n returns false for an empty array [5 points]
+

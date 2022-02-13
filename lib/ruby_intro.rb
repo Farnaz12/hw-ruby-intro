@@ -5,13 +5,13 @@ puts "Hello, World!"
 def sum arr
   sum = 0
   if arr.empty?
-    puts sum
+    return sum
   end
   #else
   for i in arr
     sum+=i 
   end
-  puts sum
+  return sum
 end
 #-----------------------------------
 def max_2_sum arr

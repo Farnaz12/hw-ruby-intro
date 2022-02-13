@@ -1,0 +1,8 @@
+Hello, World!
+Run options: include {:full_description=>/\#sum\ /}
+
+All examples were filtered out
+
+Finished in 0.0002 seconds (files took 0.09067 seconds to load)
+0 examples, 0 failures
+

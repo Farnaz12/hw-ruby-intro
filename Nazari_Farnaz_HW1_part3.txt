@@ -1,0 +1,10 @@
+Hello, World!
+Run options: include {:full_description=>/\#hello/}
+
+#hello
+  should be defined
+  The hello method returns the correct string [30 points]
+
+Finished in 0.00481 seconds (files took 0.09412 seconds to load)
+2 examples, 0 failures
+
