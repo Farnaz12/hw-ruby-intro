@@ -14,19 +14,20 @@ def sum arr
   return sum
 end
 #-----------------------------------
+#O(n):
 def max_2_sum arr
   max_2_sum = 0
   if arr.empty?
-    puts max_2_sum
+    return max_2_sum
   end
   if arr.length ==1 
     max_2_sum = arr[0]
-    puts max_2_sum
+    return max_2_sum
   end 
   if arr.length>1
     max1=arr.sort[arr.length-1]
     max2=arr.sort[arr.length-2]
-    puts max1+max2
+    return max1+max2
   end
 end
 #-----------------------------------
@@ -36,7 +37,7 @@ def sum_to_n? arr, n
   if i.zero?
     return false
   end
-  while x >= 0
+  while i >= 0
     if hash_.key?(n - arr[i])
       return true
     end
@@ -45,6 +46,30 @@ def sum_to_n? arr, n
   end
   return false
 end
+#without hashing: O(n^2)
+# def sum_to_n? arr, n
+#   sum = 0
+#   i = 0
+#   j = 0
+#   #returns false if there is no two items in the array
+#   if arr.length<=1  
+#     return false
+#   else
+#     while i<arr.length 
+#       j=i+1
+#       while j<arr.length 
+#         sum = arr[i]+arr[j]
+#         if sum == n 
+#           return true
+#           elsif sum !=n && i==arr.length-2 
+#           return false
+#         end
+#         j+=1
+#       end
+#       i+=1
+#     end
+#   end
+# end
 #-----------------------------------
 # Part 2
 #-----------------------------------
